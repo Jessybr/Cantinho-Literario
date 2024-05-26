@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="../assets/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/table.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    
 <header class="fixed flex flex-col justify-start items-center h-screen w-[19rem] bg-red-600 text-neutral-50">
     <div class="pt-5 w-[231px] h-1/6">
         <h1 class="text-2xl">Cantinho Literário</h1><hr>
