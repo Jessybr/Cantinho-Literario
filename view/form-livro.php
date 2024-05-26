@@ -12,32 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Cantinho Literário</h1>
-        </div>
-        <div>
-            <div>
-                <h2>Menu</h2>
-            </div>
-            <div>
-                <div>
-                    <ul>
-                        <li>Início</li>
-                        <li>Livros</li>
-                        <li>Empréstimos</li>
-                        <li>Clientes</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>Funcionário:</li>
-                        <li>Sair</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include_once './components/header.php' ?>
 
     <main class="h-screen ml-[20rem] pt-11 pl-20">
         <div class="mb-12 pt-4">
