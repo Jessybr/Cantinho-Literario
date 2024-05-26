@@ -10,10 +10,10 @@
         <div class="flex justify-between items-start flex-col w-4/5 h-3/4 pl-3 pt-1 font-light">
             <div>
                 <ul>
-                    <li class="my-4"><a href="home.html">Início</a></li>
-                    <li class="my-4"><a href="livros.html">Livros</a></li>
-                    <li class="my-4"><a href="emprestimos.html">Empréstimos</a></li>
-                    <li class="my-4"><a href="clientes.html">Clientes</a></li>
+                    <li class="my-4"><a href="home.php">Início</a></li>
+                    <li class="my-4"><a href="livros.php">Livros</a></li>
+                    <li class="my-4"><a href="emprestimos.php">Empréstimos</a></li>
+                    <li class="my-4"><a href="clientes.php">Clientes</a></li>
                 </ul>
             </div>
             <div>
