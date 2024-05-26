@@ -41,20 +41,22 @@
         </div>
     </header>
 
-    <main class="h-screen ml-[20rem]">
-        <div class="flex flex-col flex-wrap p-11">
-            <div class="mb-12 pt-4">
-                <h1 class="w-20 pb-1 border-b border-zinc-800 font-bold text-xl">Livros</h1>
-            </div>
+    <main class="h-screen ml-[20rem] pt-11 pl-20">
+        <div class="mb-12 pt-4">
+            <h1 class="w-20 pb-1 border-b border-zinc-800 font-bold text-xl">Livros</h1>
+        </div>
+        <div class="flex flex-col items-start w-4/5">
             <div class="flex gap-x-4 mb-8">
                 <button class="px-3 py-1 bg-red-600 rounded-md text-neutral-50 font-semibold cursor-pointer">Cadastrar livro</button>
             </div>
-            <div class="w-full flex flex-col items-center">
-                <input type="text" name="" id="" class="w-2/3 border-2 border-red-600 rounded pl-3 mb-4" placeholder="Digite alguma informção sobre o livro...">
+            <div class="w-full flex flex-col items-start">
+                <form action="" method="post" class="w-full flex flex-col justify-center items-center">
+                    <input type="search" name="" id="" class="w-2/3 border-2 border-red-600 rounded pl-3 mb-4" placeholder="Digite alguma informação sobre o livro...">
+                </form>
                 <form action="" class="w-full flex items-center flex-col">
                     <table class="table-book text-left w-full">
                         <thead>
-                            <tr >
+                            <tr>
                                 <th class="th-none"></th>
                                 <th class="py-3">Título</th>
                                 <th class="py-3">Autor</th>

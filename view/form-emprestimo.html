@@ -47,16 +47,16 @@
         <div>
             <!-- Informações do livro que vai ser emprestado 
                 tem que colocar um php aqui para puxar os livros -->
-            <div>
-                <div>
+            <div class="flex flex-row w-4/5 border-b-2 pb-6">
+                <div class="w-[133px] h-[169px] shadow-lg mr-10">
                     img 133.33 por 169.45
                 </div>
-                <div>
-                    <div>
-                        <h1>Titulo Livro</h1>
-                        <span>COD</span>
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-row items-center justify-between">
+                        <h1 class="text-xl font-bold mr-10">Titulo Livro</h1>
+                        <p class="text-base">COD</p>
                     </div>
-                    <div>
+                    <div class="flex flex-col gap-6">
                         <ul>
                             <li>Editora: Asas</li>
                             <li>Gênero: Terrror</li>
@@ -65,20 +65,20 @@
                 </div>
             </div>
 
-            <div>
-                <span>+ Adicionar livro</span>
+            <div class="flex flex-col gap-6 my-6">
+                <span class="font-bold text-red-600">+ Adicionar livro</span>
                 
-                <form action="" method="post">
-                    <label>Cliente
-                        <input type="text">
+                <form action="" method="post" class="flex flex-col gap-3">
+                    <label class="w-1/2">Cliente
+                        <input type="text" class="w-full rounded border-2 border-red-600">
                     </label>
-                    <label>CPF
-                        <input type="text">
+                    <label class="w-1/2">CPF
+                        <input type="text" class="w-full rounded border-2 border-red-600">
                     </label>
-                    <input type="submit" value="Concluir">
+                    <input type="submit" value="Concluir" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">
                 </form>
             </div>
-        </div><hr>
+        </div>
     </main>
 
     <footer>
