@@ -1,0 +1,12 @@
+footer{
+    display: flex;
+    align-items: center;
+    margin-left: 19rem;
+    height: 3.5rem;
+    background-color: #dc2626;
+    color: #fafafa;
+}
+
+footer p{
+    margin-left: 13rem;
+}
