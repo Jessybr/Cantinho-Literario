@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Emprestimos</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="../assets/output.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/table.css">
+    <link rel="stylesheet" href="../assets/header.css">
+    <link rel="stylesheet" href="../assets/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -18,7 +20,7 @@
         <div class="mb-12 pt-4">
             <h1 class="w-20 pb-1 border-b border-zinc-800 font-bold text-xl">Empréstimos</h1>
         </div>
-        <div class="w-full flex flex-col items-center">
+        <div class="w-4/5 flex flex-col items-start">
             <form action="" method="post" class="w-full flex flex-col justify-center items-center">
                 <input type="search" name="" id="" class="w-2/3 border-2 border-red-600 rounded pl-3 mb-4" placeholder="Digite o nome do cliente ou o título do livro">
             </form>
