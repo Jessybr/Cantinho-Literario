@@ -15,7 +15,7 @@
 <body>
     <?php include_once './components/header.php' ?>
 
-    <main class="h-screen sm:h-auto ml-[20rem] sm:ml-1 pt-11 pl-20 sm:px-8">
+    <main class="h-screen sm:h-screen ml-[20rem] sm:ml-1 pt-11 pl-20 sm:px-8">
         <div class="flex flex-row flex-wrap sm:flex-col">
             <div class="flex flex-col gap-3 w-1/2 sm:w-auto mb-12 sm:mb-6 pt-14 sm:pt-6">
                 <h1 class="w-20 pb-1 border-b border-zinc-800 font-bold text-xl">Livros</h1>
@@ -58,7 +58,7 @@
         </div>
     </main>
 
-    <?php //include_once './components/footer.php' ?>
+    <?php include_once './components/footer.php' ?>
     <script src="../assets/script/menu.js"></script>
 </body>
 </html>
