@@ -58,7 +58,7 @@
         </div>
     </main>
 
-    <?php include_once './components/footer.php' ?>
-
+    <?php //include_once './components/footer.php' ?>
+    <script src="../assets/script/menu.js"></script>
 </body>
 </html>
