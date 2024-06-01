@@ -15,23 +15,23 @@
 <body>
     <?php include_once './components/header.php' ?>
 
-    <main class="h-screen ml-[20rem] pt-11 pl-20">
-        <div class="flex flex-row flex-wrap md:flex-col">
-            <div class="flex flex-col gap-3 w-1/2 mb-12 pt-14">
+    <main class="h-screen sm:h-auto ml-[20rem] sm:ml-1 pt-11 pl-20 sm:px-8">
+        <div class="flex flex-row flex-wrap sm:flex-col">
+            <div class="flex flex-col gap-3 w-1/2 sm:w-auto mb-12 sm:mb-6 pt-14 sm:pt-6">
                 <h1 class="w-20 pb-1 border-b border-zinc-800 font-bold text-xl">Livros</h1>
                 <p>Quantidade de livros:</p>
                 <p>Disponíveis:</p>
             </div>
 
-            <div class="flex flex-col gap-3 w-1/2 mb-12 pt-14">
+            <div class="flex flex-col gap-3 w-1/2 sm:w-auto mb-12 sm:mb-6 pt-14 sm:pt-6">
                 <h1 class="w-32 pb-1 border-b border-zinc-800 font-bold text-xl">Exemplares</h1>
                 <p>Quantidade de exemplares:</p>
                 <p>Disponíveis:</p>
             </div>
 
-            <!-- <div class="flex flex-col gap-3 w-4/5">
+            <div class="flex flex-col gap-3 w-4/5 sm:w-full sm:pt-6">
                 <h1 class="w-60 pb-1 border-b border-zinc-800 font-bold text-xl mb-5">Devoluções próximas</h1>
-                <form action="" class="w-full">
+                <form action="" class="w-full sm:w-full sm:overflow-scroll">
                     <table class="table-home text-left w-full">
                         <thead>
                             <tr >
@@ -54,7 +54,7 @@
                         </tbody>
                     </table>
                 </form>
-            </div> -->
+            </div>
         </div>
     </main>
 
