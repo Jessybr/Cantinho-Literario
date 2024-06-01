@@ -16,7 +16,7 @@
     <?php include_once './components/header.php' ?>
 
     <main class="h-screen ml-[20rem] pt-11 pl-20">
-        <div class="flex flex-row flex-wrap">
+        <div class="flex flex-row flex-wrap md:flex-col">
             <div class="flex flex-col gap-3 w-1/2 mb-12 pt-14">
                 <h1 class="w-20 pb-1 border-b border-zinc-800 font-bold text-xl">Livros</h1>
                 <p>Quantidade de livros:</p>
@@ -29,7 +29,7 @@
                 <p>Disponíveis:</p>
             </div>
 
-            <div class="flex flex-col gap-3 w-4/5">
+            <!-- <div class="flex flex-col gap-3 w-4/5">
                 <h1 class="w-60 pb-1 border-b border-zinc-800 font-bold text-xl mb-5">Devoluções próximas</h1>
                 <form action="" class="w-full">
                     <table class="table-home text-left w-full">
@@ -54,7 +54,7 @@
                         </tbody>
                     </table>
                 </form>
-            </div>
+            </div> -->
         </div>
     </main>
 

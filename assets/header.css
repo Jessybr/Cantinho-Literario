@@ -54,3 +54,9 @@ header .cont-menu .menu-list div ul li{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 768px){
+    header{
+        display: none;
+    }
+}

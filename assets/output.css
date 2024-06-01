@@ -2765,8 +2765,42 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .sm\:pl-0 {
+    padding-left: 0px;
+  }
+
   .sm\:underline {
     text-decoration-line: underline;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:pl-0 {
+    padding-left: 0px;
   }
 }
 
