@@ -55,11 +55,13 @@ header .cont-menu .menu-list div ul li{
     margin-bottom: 1rem;
 }
 
-.menus-creen{
+.menu-screen, .menu-screen-side{
     display: none;
+    border: none;
 }
 
-@media only screen and (max-width: 768px){
+
+@media (max-width: 640px){
     .menu-screen{
         display: flex;
         flex-direction: row;
