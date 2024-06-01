@@ -55,8 +55,62 @@ header .cont-menu .menu-list div ul li{
     margin-bottom: 1rem;
 }
 
+.menus-creen{
+    display: none;
+}
+
 @media only screen and (max-width: 768px){
+    .menu-screen{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        height: 50px;
+        padding: 0 10px 0 32px;
+        background-color: #dc2626;
+        color: #fafafa;
+        font-size: 24px;
+    }
+
     header{
         display: none;
+    }
+
+    .visible{
+        display: flex  !important;
+        flex-direction: column;
+    }
+
+    .menu-screen-side{
+        position: fixed;
+        display: none;
+        width: 271px;
+        height: 100vh;
+        padding: 22px 0 0 22px;
+        background-color: #dc2626;
+        color: #fafafa;
+    }
+
+    .menu-screen-side .menu-title{
+        padding-left: 0.75rem;
+        padding-bottom: 0.5rem;
+        font-weight: 900;
+    }
+
+    .menu-screen-side .menu-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        width: 80%;
+        height: 75%;
+        padding-left: 0.75rem;
+        padding-top: 0.25rem;
+        font-weight: 300;
+    }
+
+    .menu-screen-side .menu-list div ul li{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
