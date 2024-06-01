@@ -22,6 +22,10 @@
         </div>
         <div>
             <form action="" method="POST" class="flex flex-row justify-between flex-wrap gap-3 w-2/3">
+                <label>
+                    Foto
+                    <input type="file" name="" class="w-full">
+                </label>
                 <label class="w-full">
                     Título
                     <input type="text" name="" id=""  class="w-full border-2 border-red-600 rounded">
