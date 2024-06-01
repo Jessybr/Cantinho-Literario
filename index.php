@@ -11,7 +11,7 @@
 </head>
 <body>
     <main class="flex justify-center items-center alig flex-col gap-20 font-sans h-screen">
-        <div class="w-[545px]">
+        <div class="w-72">
             <h1 class="flex items-center justify-center text-2xl font-medium text-zinc-800">Cantinho Literário</h1>
         </div>
         <div class="flex items-center justify-center flex-col w-[545px] h-[313px] bg-red-600 rounded-2xl">
