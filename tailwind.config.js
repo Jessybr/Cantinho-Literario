@@ -6,13 +6,11 @@ module.exports = {
         'sans': ['Jost', 'sans-serif'],
       },
     screens: {
-        'sm': '240px',
-        // => @media (min-width: 640px) { ... }
+        'sm': {'max': '768px'},
+        // antigo => @media (min-width: 640px) { ... }
 
-        'md': '600px',
-        // => @media (min-width: 768px) { ... }
-
-        'lg': '768px'
+        'md': {'max': '1290px'},
+        // antigo => @media (min-width: 768px) { ... }
       },
     extend: {},
   },
