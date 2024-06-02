@@ -20,11 +20,11 @@
         <div class="mb-12 pt-4">
             <h1 class="w-20 pb-1 border-b border-zinc-800 font-bold text-xl">Empréstimos</h1>
         </div>
-        <div class="w-4/5 flex flex-col items-start sm:w-full">
+        <div class="w-4/5 flex flex-col items-start sm:w-full md:w-11/12">
             <form action="" method="post" class="w-full flex flex-col justify-center items-center">
                 <input type="search" name="" id="" class="w-2/3 border-2 border-red-600 rounded pl-3 mb-4 sm:w-full" placeholder="Digite o nome do cliente ou o título do livro">
             </form>
-            <div class="sm:overflow-scroll sm:w-full">
+            <div class="sm:overflow-scroll sm:w-full md:items-start md:overflow-scroll md:w-full">
                 <table class="table-book text-center w-full">
                     <thead>
                         <tr>

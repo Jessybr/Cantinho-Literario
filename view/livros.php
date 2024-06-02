@@ -20,7 +20,7 @@
         <div class="mb-12 pt-4">
             <h1 class="w-20 pb-1 border-b border-zinc-800 font-bold text-xl">Livros</h1>
         </div>
-        <div class="flex flex-col items-start w-4/5 sm:w-full">
+        <div class="flex flex-col items-start w-4/5 sm:w-full md:w-11/12">
             <div class="flex gap-x-4 mb-8">
                 <button class="px-3 py-1 bg-red-600 rounded-md text-neutral-50 font-semibold cursor-pointer">Cadastrar livro</button>
             </div>
@@ -28,7 +28,7 @@
                 <form action="" method="post" class="w-full flex flex-col justify-center items-center">
                     <input type="search" name="" id="" class="w-2/3 border-2 border-red-600 rounded pl-3 mb-4 sm:w-full" placeholder="Digite alguma informação sobre o livro...">
                 </form>
-                <form action="" class="w-full flex items-center flex-col sm:items-start sm:w-full sm:overflow-scroll">
+                <form action="" class="w-full flex items-center flex-col sm:items-start sm:w-full sm:overflow-scroll md:items-start md:w-full md:overflow-scroll">
                     <table class="table-book text-left w-full">
                         <thead>
                             <tr>

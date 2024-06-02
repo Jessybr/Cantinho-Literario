@@ -24,7 +24,7 @@
             <form action="" method="post" class="w-3/4 flex flex-col justify-center items-center">
                 <input type="search" name="" id="" class="w-2/3 border-2 border-red-600 rounded pl-3 mb-4 sm:w-full" placeholder="Digite o nome do cliente ou o título do livro">
             </form>
-            <div class="sm:w-full sm:overflow-scroll">
+            <div class="sm:w-full sm:overflow-scroll md:items-start md:overflow-scroll md:w-11/12">
                 <table class="table-cliente text-center">
                     <thead>
                         <tr>

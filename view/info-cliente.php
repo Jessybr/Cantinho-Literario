@@ -39,7 +39,7 @@
         
         <div class="flex flex-col gap-5 sm:mb-8">
             <h1 class="my-5 text-xl font-bold">Empréstimos passados</h1>
-            <div class="sm:w-full sm:overflow-scroll">
+            <div class="sm:w-full sm:overflow-scroll md:items-start md:overflow-scroll md:w-11/12">
                 <table class="table-book text-center w-full">
                     <thead>
                         <tr>
