@@ -53,6 +53,7 @@ header .cont-menu .menu-list{
 header .cont-menu .menu-list div ul li{
     margin-top: 1rem;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .menu-screen, .menu-screen-side{
@@ -61,7 +62,7 @@ header .cont-menu .menu-list div ul li{
 }
 
 
-@media (max-width: 640px){
+@media (max-width: 768px){
     .menu-screen{
         display: flex;
         flex-direction: row;

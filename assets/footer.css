@@ -1,22 +1,26 @@
 footer{
     display: flex;
     align-items: center;
-    margin-left: 19rem;
     height: 3.5rem;
     background-color: #dc2626;
     color: #fafafa;
+    z-index: 99;
+    position: relative;
 }
 
 footer p{
-    margin-left: 13rem;
+    text-align: center;
+    margin: auto;
 }
 
-@media (max-width: 640px){
+@media (max-width: 768px){
     footer{
         margin-left: 0;
+        text-align: center;
+        width: 100%;
     }
     footer p{
-        margin-left: 0;
+        margin: auto;
         text-align: center;
     }
 }
