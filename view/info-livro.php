@@ -44,8 +44,8 @@
             <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perferendis quis cum dolor temporibus eum, similique porro dolore provident, maiores perspiciatis rem. Cumque nostrum ea obcaecati tempora facilis. Incidunt, quos.</div>
         </div>
         <div class="flex items-center gap-6 sm:mb-8">
-            <a href="" class="font-semibold text-red-600">Realizar Empréstimo</a>
-            <a href="" class="px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Editar</a>
+            <a href="./form-emprestimo.php" class="font-semibold text-red-600">Realizar Empréstimo</a>
+            <a href="./form-livro.php" class="px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Editar</a>
             <a href="" class="px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Excluir</a>
         </div>
     </main>

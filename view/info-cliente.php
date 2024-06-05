@@ -34,7 +34,8 @@
                 <p class="w-2/5 sm:w-full">Endereço</p>
                 <p class="w-2/5 sm:w-full">Celular</p>
             </div>
-            <a href="form-cliente.html" class="w-[100px] py-[3px] px-7 text-neutral-50 font-semibold bg-red-600 rounded">Editar</a>
+            <div class="flex flex-row gap-5">
+                <a href="form-cliente.php" class="w-[100px] py-[3px] px-7 text-neutral-50 font-semibold bg-red-600 rounded">Editar</a>
         </div>
         
         <div class="flex flex-col gap-5 sm:mb-8">

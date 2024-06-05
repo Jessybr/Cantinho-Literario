@@ -60,7 +60,7 @@
                     </tfoot>
                 </table>
             </div>
-            <a href="" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600 mt-5">Cadastrar Cliente</a>
+            <a href="form-cliente.php" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600 mt-5">Cadastrar Cliente</a>
         </div>
     </main>
 

@@ -46,7 +46,7 @@
         </div>
         <div class="flex gap-6 sm:mb-8 sm:overflow-auto">
             <a href="" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Devolver</a>
-            <a href="" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Editar</a>
+            <a href="./form-emprestimo.php" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Editar</a>
             <a href="" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Excluir</a>
         </div>
     </main>
