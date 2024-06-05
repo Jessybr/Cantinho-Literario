@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../assets/table.css">
     <link rel="stylesheet" href="../assets/header.css">
     <link rel="stylesheet" href="../assets/footer.css">
+    <link rel="stylesheet" href="../assets/alert.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -27,6 +28,24 @@
         </div>
     </div>
 
+    <div class="alert-devolucao bg-red-600 rounded-2xl text-zinc-900 flex flex-col items-center py-9 gap-3">
+        <h3 class="text-neutral-50">Devolução</h3>
+        <div class="flex flex-col gap-10">
+            <form action="" method="post" class="flex flex-wrap items-center w-full gap-6">
+                <label class="text-zinc-900">Como estava o estado do livro?
+                    <select name="" id="">
+                        <option value="">Normal</option>
+                        <option value="">Rabiscado</option>
+                        <option value="">Molhado</option>
+                        <option value="">Rasgado</option>
+                        <option value="">Perdido</option>
+                    </select>
+                </label>
+                <input type="submit" value="Devolver" class="px-7 rounded-md bg-neutral-50 text-zinc-800 w-28 self-center">
+            </form>
+            <button id='cancelDevolucaoBtn' class="w-28 px-4 rounded-md bg-neutral-50 text-zinc-800 self-center">Cancelar</button>
+        </div>
+    </div>
     
     <main class="h-screen ml-[20rem] pt-11 pl-20 sm:h-full sm:ml-1 sm:px-8">
         <div class="mb-12 pt-4">
@@ -57,7 +76,7 @@
             <p class="w-2/5 sm:w-full">Data de devolução: 21/21/12</p>
         </div>
         <div class="flex gap-6 sm:mb-8 sm:overflow-auto">
-            <a href="" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Devolver</a>
+            <span id="finish-emprestimo" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Devolver</span>
             <a href="./form-emprestimo.php" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Editar</a>
             <span id="btn-delete" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600 cursor-pointer">Excluir</span>
         </div>
@@ -65,5 +84,7 @@
 
     <?php include_once './components/footer.php' ?>
     <script src="../assets/script/menu.js"></script>
+    <script src="../assets/script/alertDelete.js"></script>
+    <script src="../assets/script/alertDevolucao.js"></script>
 </body>
 </html>
