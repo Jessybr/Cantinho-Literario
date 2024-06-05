@@ -1,0 +1,45 @@
+.alert-delete{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    height: 150px;
+}
+
+.alert-devolucao{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    height: 200px;
+}
+
+.hidden{
+    display: none;
+}
+.visible{
+    display: flex;
+}
+
+@media (max-width: 768px){
+    .alert-delete{
+        top: 300px;
+        left: 0;
+        right: 0;
+        width: 300px;
+        margin: auto;
+    }
+
+    .alert-devolucao{
+        top: 300px;
+        left: 0;
+        right: 0;
+        width: 336px;
+        margin: auto;
+        padding: 10px;
+    }
+}
