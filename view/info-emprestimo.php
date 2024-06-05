@@ -15,6 +15,18 @@
 </head>
 <body>
     <?php include_once './components/header.php' ?>
+
+    <div class="alert-delete bg-red-600 rounded-2xl text-neutral-50 flex flex-col items-center py-9 gap-4">
+        <h3>Tem certeza que deseja excluir este livro?</h3>
+        <div class="flex flex-row gap-12">
+            <form action="" method="post">
+                <input type="hidden" name="">
+                <input type="submit" value="Sim" class="px-7 rounded-md bg-neutral-50 text-zinc-900">
+            </form>
+            <button id='cancelBtn' class="px-7 rounded-md bg-neutral-50 text-zinc-900">Não</button>
+        </div>
+    </div>
+
     
     <main class="h-screen ml-[20rem] pt-11 pl-20 sm:h-full sm:ml-1 sm:px-8">
         <div class="mb-12 pt-4">
@@ -47,7 +59,7 @@
         <div class="flex gap-6 sm:mb-8 sm:overflow-auto">
             <a href="" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Devolver</a>
             <a href="./form-emprestimo.php" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Editar</a>
-            <a href="" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Excluir</a>
+            <span id="btn-delete" class="self-start px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600 cursor-pointer">Excluir</span>
         </div>
     </main>
 

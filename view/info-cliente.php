@@ -9,12 +9,24 @@
     <link rel="stylesheet" href="../assets/table.css">
     <link rel="stylesheet" href="../assets/header.css">
     <link rel="stylesheet" href="../assets/footer.css">
+    <link rel="stylesheet" href="../assets/alert.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <?php include_once './components/header.php' ?>
+
+    <div class="alert-delete bg-red-600 rounded-2xl text-neutral-50 flex flex-col items-center py-9 gap-4">
+        <h3>Tem certeza que deseja excluir este livro?</h3>
+        <div class="flex flex-row gap-12">
+            <form action="" method="post">
+                <input type="hidden" name="">
+                <input type="submit" value="Sim" class="px-7 rounded-md bg-neutral-50 text-zinc-900">
+            </form>
+            <button id='cancelBtn' class="px-7 rounded-md bg-neutral-50 text-zinc-900">Não</button>
+        </div>
+    </div>
 
     <main class="h-screen ml-[20rem] pt-11 pl-20 sm:h-full sm:ml-1 sm:px-8">
         <div class="mb-12 pt-4">
@@ -36,6 +48,8 @@
             </div>
             <div class="flex flex-row gap-5">
                 <a href="form-cliente.php" class="w-[100px] py-[3px] px-7 text-neutral-50 font-semibold bg-red-600 rounded">Editar</a>
+                <span id="btn-delete" class="w-[100px] py-[3px] px-7 rounded text-neutral-50 font-semibold bg-red-600">Excluir</span>
+            </div>
         </div>
         
         <div class="flex flex-col gap-5 sm:mb-8">
@@ -85,5 +99,6 @@
     
     <?php include_once './components/footer.php' ?>
     <script src="../assets/script/menu.js"></script>
+    <script src="../assets/script/alertDelete.js"></script>
 </body>
 </html>
