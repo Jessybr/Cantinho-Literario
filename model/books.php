@@ -64,3 +64,40 @@
         public function setQuantidade($quantidade){
             return $this->quantidade = $quantidade;
         }
+
+        public function getDatas($inicio, $limite){
+            $conn = new Connection;
+            $conn->start();
+            $datas = [];
+
+            try{
+                $sql = "SELECT * FROM tb_livro LIMIT $inicio, $limite";
+                $pdo = $conn->prepare($sql);
+                $pdo->execute();
+            
+                while($result = $pdo->fetch(PDO::FETCH_ASSOC)){
+                    $datas[] = $result;
+                }
+                return $datas;
+            }catch(PDOexception $e){
+                echo $e->getMessage();
+            }
+        }
+
+        public function countDatas(){
+            $conn = new Connection;
+            $conn->start();
+
+            try{
+                $sql = "SELECT COUNT(*) as total FROM tb_livro";
+                $pdo = $conn->prepare($sql);
+                $pdo->execute();
+                    $row = $pdo->fetch(PDO::FETCH_ASSOC);
+                    $total_registros = $row['total'];
+                    return $total_registros;
+            }catch(PDOexception $e){
+                echo $e->getMessage();
+            }
+        }
+    }
+?>
