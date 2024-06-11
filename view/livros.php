@@ -18,8 +18,21 @@
         require '../control/books_controller.php';
 
         $stmt = new BooksControler;
+        $pagina = 1;
+        if(isset($_GET['pagina']))
+            $pagina = filter_input(INPUT_GET, "pagina", FILTER_VALIDATE_INT);
 
-    <main class="h-screen ml-[20rem] pt-11 pl-20 sm:h-screen sm:ml-1 sm:px-8">
+        if(!$pagina)
+            $pagina = 1;
+        
+        $limite = 10;
+        $inicio = ($pagina * $limite) - $limite;
+        $total = $stmt->countAllDatas();
+        $fim = ceil($total / $limite);
+        
+    ?>
+
+    <main class="h-full ml-[20rem] pt-11 pl-20 pb-8 sm:h-screen sm:ml-1 sm:px-8">
         <div class="mb-12 pt-4">
             <h1 class="w-20 pb-1 border-b border-zinc-800 font-bold text-xl">Livros</h1>
         </div>
@@ -31,6 +44,7 @@
                 <form action="" method="post" class="w-full flex flex-col justify-center items-center">
                     <input type="search" name="" id="" class="w-2/3 border-2 border-red-600 rounded pl-3 mb-4 sm:w-full" placeholder="Digite alguma informação sobre o livro...">
                 </form>
+                
                 <form action="" class="w-full flex items-center flex-col sm:items-start sm:w-full sm:overflow-scroll md:items-start md:w-full md:overflow-scroll">
                     <table class="table-book text-left w-full">
                         <thead>
@@ -66,17 +80,31 @@
                         </tbody>
                         <tfoot class="text-neutral-50 font-light">
                             <tr>
-                                <td class="py-3 px-5" colspan="2">Mostrando 20 de 20</td>
+                                <td class="py-3 px-5" colspan="2">Mostrando <?php echo $count;?> de <?php echo $total;?></td>
                                 <td class="py-3 px-5" colspan="5">
                                     <div class="flex flex-row justify-end w-full">
-                                        <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fafafa"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg><svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fafafa"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
-                                        <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fafafa"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
-                                        <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fafafa"><path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/></svg>
+                                        <a href="?pagina=<?=1;?>">
+                                            <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fafafa"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                                        </a>
+                                        <?php if($pagina>1){ ?>
+                                        <a href="?pagina=<?=$pagina-1; ?>">
+                                            <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fafafa"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
+                                        </a>
+                                        <?php } ?>
+                                        <?php if($pagina<$fim){ ?>
+                                        <a href="?pagina=<?=$pagina+1;?>">
+                                            <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fafafa"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                                        </a>
+                                        <?php } ?>
+                                        <a href="?pagina=<?=$fim;?>">
+                                            <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fafafa"><path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/></svg>
+                                        </a>
                                     </div>
                                 </td>
                             </tr>
                         </tfoot>
                     </table>
+                    
                 </form>
             </div>
         </div>
