@@ -7,3 +7,10 @@ require_once '../model/books.php';
             $books = new Books;
             return  $datas = $books->getDatas($inicio, $limite);
         }
+
+        public function countAllDatas(){
+            $books = new Books;
+            return  $datas = $books->countDatas();
+        }
+    }
+?>
