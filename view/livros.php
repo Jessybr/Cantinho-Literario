@@ -14,7 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include_once './components/header.php' ?>
+    <?php include_once './components/header.php';
+        require '../control/books_controller.php';
+
+        $stmt = new BooksControler;
 
     <main class="h-screen ml-[20rem] pt-11 pl-20 sm:h-screen sm:ml-1 sm:px-8">
         <div class="mb-12 pt-4">
@@ -41,18 +44,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php
+                                $datas = $stmt->viewAllDatas($inicio, $limite);
+                                $count = 0;
+                                for($i = 0; $i < count($datas); $i++) {
+                                    $count++;
+                            ?>
                             <tr class="text-center">
                                 <td class="px-5 th-none py-3"><input type="checkbox" name="" id=""></td>
-                                <td class="py-3">O Príncepe</td>
-                                <td class="py-3">Ronaldo</td>
-                                <td class="py-3">23</td>
-                                <td class="py-3">002</td>
+                                <td class="py-3"><?php echo $datas[$i]["Titulo"]; ?></td>
+                                <td class="py-3"><?php echo $datas[$i]['Autor']; ?></td>
+                                <td class="py-3"><?php echo $datas[$i]['Quantidade']; ?></td>
+                                <td class="py-3"><?php echo $datas[$i]['Cod_livro']; ?></td>
                                 <td class="pr-5 th-none py-3">
                                     <a href="./info-livro.php">
                                         <svg class="ml-10 cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#6d6d6e"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
                                     </a>
                             </td>
                             </tr>
+                            <?php } ?>
                         </tbody>
                         <tfoot class="text-neutral-50 font-light">
                             <tr>
