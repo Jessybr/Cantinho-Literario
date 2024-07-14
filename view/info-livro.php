@@ -15,7 +15,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include_once './components/header.php' ?>
+    <?php include_once './components/header.php';
+        require '../control/booksControl.php';
+        $book = new BooksControl;
+        if(isset($_GET['Cod_livro'])){
+            $Cod_livro = $_GET['Cod_livro'];
+            $result = $book->getBook($Cod_livro);
+            $data = $result->fetch(PDO::FETCH_ASSOC);
+        }
+        
+    ?>
 
     <div class="alert-delete bg-red-600 rounded-2xl text-neutral-50 flex flex-col items-center py-9 gap-4">
         <h3>Tem certeza que deseja excluir este livro?</h3>
@@ -30,7 +39,7 @@
 
     <main class="h-screen ml-[20rem] pt-11 pl-20 sm:h-full sm:ml-1 sm:px-8">
         <div class="mb-12 pt-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#27272a" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z"></path></svg>
+            <h3>Informação</h3>
         </div>
         <div class="flex flex-row w-4/5 border-b-2 pb-6 sm:w-full sm:flex-col">
             <div class="w-[133px] h-[169px] shadow-lg mr-10">
@@ -38,15 +47,15 @@
             </div>
             <div class="flex flex-col gap-4">
                 <div class="flex flex-row items-center justify-between sm:flex-col sm:gap-4 sm:items-start">
-                    <h1 class="text-xl font-bold mr-10">Titulo Livro</h1>
-                    <p class="text-base">COD</p>
+                    <h1 class="text-xl font-bold mr-10"><?php echo $data['Titulo'];?></h1>
+                    <p class="text-base">Cod: <?php echo $data['Cod_livro'];?></p>
                 </div>
                 <div class="flex flex-col">
                     <ul class="sm:flex sm:flex-col sm:gap-4">
-                        <li>Editora: Asas</li>
-                        <li>Gênero: Terror</li>
-                        <li>Quantidade de exemplares:</li>
-                        <li>Exemplares disponíveis:</li>
+                        <li>Editora: <?php echo $data['Editora'];?></li>
+                        <li>Gênero: <?php echo $data['Genero'];?></li>
+                        <li>Quantidade de exemplares: <?php echo $data['Quantidade'];?></li>
+                        <li>Exemplares disponíveis: </li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +66,7 @@
         </div>
         <div class="flex items-center gap-6 sm:mb-8">
             <a href="./form-emprestimo.php" class="font-semibold text-red-600">Realizar Empréstimo</a>
-            <a href="./form-livro.php" class="px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Editar</a>
+            <a href="./form-livro.php?Cod_livro=<?=$data['Cod_livro']?>" class="px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600">Editar</a>
             <span id="btn-delete" class="px-4 py-[6px] rounded text-neutral-50 font-semibold bg-red-600 cursor-pointer">Excluir</span>
         </div>
     </main>
