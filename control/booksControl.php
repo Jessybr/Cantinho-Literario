@@ -19,5 +19,16 @@ require_once '../model/booksModel.php';
         public function getBook($Cod_livro){
             return  $datas = $this->books->getBook($Cod_livro);
         }
+
+        public function updateBook($Cod_livro, $Foto, $Titulo, $Autor, $Editora, $Genero, $Quantidade){
+            $result = $this->books->updateBook($Cod_livro, $Foto, $Titulo, $Autor, $Editora, $Genero, $Quantidade);
+            
+
+            if($result == TRUE) {
+                echo '<script>window.location.href = "./livros.php"</script>';
+            }else{
+                echo '<script>alert("Erro ao atualizar o livro")</script>';
+            }
+        }
     }
 ?>
